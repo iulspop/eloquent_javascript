@@ -14,7 +14,9 @@ test('print pyramid of "#" with a seven "#" base', () => {
 function printFizzBuzz() {
 	let print = [];
 	for (let i = 1; i <= 100; i++) {
-		if (i % 3 === 0) {
+		if (i % 3 === 0 && i % 5 === 0) {
+			print.push("FizzBuzz");
+		} else if (i % 3 === 0) {
 			print.push("Fizz");
 		} else if (i % 5 === 0) {
 			print.push("Buzz");
@@ -25,10 +27,22 @@ function printFizzBuzz() {
 	return print;
 }
 
+function printFizzBuzz2() {
+	let print = [];
+	for (let n = 1; n <= 100; n++) {
+		let output = "";
+		if (n % 3 == 0) { output += "Fizz" };
+		if (n % 5 == 0) { output += "Buzz" };
+		print.push(output || n);
+	}
+	return print;
+}
+
 test(`print all numbers from 1 to 100, 
 except multiples of 3 are replaced by "Fizz", 
-except multiples of 5 are replaced by "Buzz"`, () => {
-	expect(printFizzBuzz()).toEqual([
+except multiples of 5 are replaced by "Buzz",
+except multiples of both 3 and 5 are replaced by "FizzBuzz"`, () => {
+	expect(printFizzBuzz2()).toEqual([
 		1,
 		2,
 		"Fizz",
@@ -43,7 +57,7 @@ except multiples of 5 are replaced by "Buzz"`, () => {
 		"Fizz",
 		13,
 		14,
-		"Fizz",
+		"FizzBuzz",
 		16,
 		17,
 		"Fizz",
@@ -58,7 +72,7 @@ except multiples of 5 are replaced by "Buzz"`, () => {
 		"Fizz",
 		28,
 		29,
-		"Fizz",
+		"FizzBuzz",
 		31,
 		32,
 		"Fizz",
@@ -73,7 +87,7 @@ except multiples of 5 are replaced by "Buzz"`, () => {
 		"Fizz",
 		43,
 		44,
-		"Fizz",
+		"FizzBuzz",
 		46,
 		47,
 		"Fizz",
@@ -88,7 +102,7 @@ except multiples of 5 are replaced by "Buzz"`, () => {
 		"Fizz",
 		58,
 		59,
-		"Fizz",
+		"FizzBuzz",
 		61,
 		62,
 		"Fizz",
@@ -103,7 +117,7 @@ except multiples of 5 are replaced by "Buzz"`, () => {
 		"Fizz",
 		73,
 		74,
-		"Fizz",
+		"FizzBuzz",
 		76,
 		77,
 		"Fizz",
@@ -118,7 +132,7 @@ except multiples of 5 are replaced by "Buzz"`, () => {
 		"Fizz",
 		88,
 		89,
-		"Fizz",
+		"FizzBuzz",
 		91,
 		92,
 		"Fizz",
