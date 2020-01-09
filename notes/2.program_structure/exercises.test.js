@@ -145,3 +145,32 @@ except multiples of both 3 and 5 are replaced by "FizzBuzz"`, () => {
 		"Buzz"
 	])
 });
+
+function createChessBoard() {
+	return (
+		`
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # `
+	)
+}
+
+test(`does it create a string that represents 8x8 grid of "#"
+and spaces with rows delimited by newline char?`, () => {
+	expect(createChessBoard()).toEqual(
+		`
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # `
+	);
+});
