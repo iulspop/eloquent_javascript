@@ -1,0 +1,14 @@
+{
+  "name": "eloquent_javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iulspop/eloquent_javascript.git",
+  "author": "Iuliu Pop <iuliu.laurentiu.pop@protonmail.com>",
+  "license": "MIT",
+  "scripts": {
+	"test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
