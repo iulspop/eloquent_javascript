@@ -2,7 +2,7 @@ function pyramidMaker() {
 	let holdForTest = []
 	for (let line = "#"; line.length < 8; line += "#") {
 		holdForTest.push(line);
-		console.log(line);
+		// console.log(line);
 	}
 	return holdForTest;
 }
@@ -146,23 +146,29 @@ except multiples of both 3 and 5 are replaced by "FizzBuzz"`, () => {
 	])
 });
 
-function createChessBoard() {
-	return (
-		`
- # # # #
-# # # # 
- # # # #
-# # # # 
- # # # #
-# # # # 
- # # # #
-# # # # `
-	)
+function createChessBoard(size) {
+	board = ``; // init board
+	for (let boardRow = 1; boardRow <= size; boardRow++) { // loop for each row of board
+		row = ``; // init row
+		board += `\n`; // add newline char at start of row
+		for (let rowPos = 1; rowPos <= size; rowPos++) { // loop for each position of row
+			if (!(boardRow % 2 === 0)) { // check if board row should start with " " or "#"
+				if (!(rowPos % 2 === 0)) { // check if board position is " " or "#"
+					row += ` `;
+				} else { row += `#` };
+			} else { // board starts with '#' on rows divisible by two.
+				if (!(rowPos % 2 === 0)) {
+					row += `#`;
+				} else { row += ` ` };
+			}
+		}
+		board += row;
+	}
+	return board;
 }
 
-test(`does it create a string that represents 8x8 grid of "#"
-and spaces with rows delimited by newline char?`, () => {
-	expect(createChessBoard()).toEqual(
+test(`when size = 8, is grid right size?`, () => {
+	expect(createChessBoard(8)).toEqual(
 		`
  # # # #
 # # # # 
@@ -172,5 +178,21 @@ and spaces with rows delimited by newline char?`, () => {
 # # # # 
  # # # #
 # # # # `
+	);
+});
+
+test(`when size = 10, is grid right size?`, () => {
+	expect(createChessBoard(10)).toEqual(
+		`
+ # # # # #
+# # # # # 
+ # # # # #
+# # # # # 
+ # # # # #
+# # # # # 
+ # # # # #
+# # # # # 
+ # # # # #
+# # # # # `
 	);
 });
