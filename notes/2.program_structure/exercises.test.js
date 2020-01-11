@@ -147,7 +147,7 @@ except multiples of both 3 and 5 are replaced by "FizzBuzz"`, () => {
 });
 
 function createChessBoard(size) {
-	board = ``; // init board
+	let board = ``; // init board
 	for (let boardRow = 1; boardRow <= size; boardRow++) { // loop for each row of board
 		row = ``; // init row
 		board += `\n`; // add newline char at start of row
@@ -167,8 +167,21 @@ function createChessBoard(size) {
 	return board;
 }
 
+function createChessBoard2(size) {
+	let board = "";
+	for (let y = 0; y < size; y++) {
+		board += "\n";
+		for (let x = 0; x < size; x++) {
+			if ((x + y) % 2 == 0) {
+				board += " "
+			} else { board += "#" }
+		}
+	}
+	return board;
+}
+
 test(`when size = 8, is grid right size?`, () => {
-	expect(createChessBoard(8)).toEqual(
+	expect(createChessBoard2(8)).toEqual(
 		`
  # # # #
 # # # # 
@@ -182,7 +195,7 @@ test(`when size = 8, is grid right size?`, () => {
 });
 
 test(`when size = 10, is grid right size?`, () => {
-	expect(createChessBoard(10)).toEqual(
+	expect(createChessBoard2(10)).toEqual(
 		`
  # # # # #
 # # # # # 
