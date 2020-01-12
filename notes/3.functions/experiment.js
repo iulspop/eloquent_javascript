@@ -7,7 +7,7 @@
 // }, 1000)
 
 const factorial = function (x) {
-	let x =
+	x = 5;
 	let sum = 0;
 	while (x > 2) {
 		sum = (sum || x) * (x - 1);
@@ -16,4 +16,4 @@ const factorial = function (x) {
 	console.log(sum);
 }
 
-factorial(5);
+factorial(2);
