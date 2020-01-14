@@ -31,10 +31,20 @@
 // nestBlocks()
 
 // Testing Function Hoisting
-function timeMachine() {
-	return "a great flood";
-}
+// function timeMachine() {
+// 	return "a great flood";
+// }
 
-{
-	console.log("The weather 10000 years ago was:", timeMachine());
-}
+// {
+// 	console.log("The weather 10000 years ago was:", timeMachine());
+// }
+
+// Testing Call Stack
+const firstFunction = () => { console.log('hello from first function') }
+function secondFunction() { firstFunction(); }
+function thirdFunction() { secondFunction(); }
+thirdFunction();
+
+const throwError = () => { throw new Error('stack trace error') };
+function secondStackFrame() { console.log(''); throwError(); };
+secondStackFrame();
