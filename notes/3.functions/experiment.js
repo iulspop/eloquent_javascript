@@ -64,6 +64,16 @@
 // let functionPotato = () => " hello back";
 // printToConsole("hello");
 
-const throwError = () => { throw new Error('stack trace error') };
-function secondStackFrame() { console.log(''); throwError(); };
-secondStackFrame();
+
+
+// Testing Closures
+let wrapValue = (n) => {
+	let local = n;
+	return () => local; // this is a closure, because it references a value from local scope around it.
+}
+
+let x = wrapValue(10);
+let y = wrapValue(999);
+
+console.log(x());
+console.log(y());
