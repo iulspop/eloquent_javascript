@@ -67,13 +67,55 @@
 
 
 // Testing Closures
-let wrapValue = (n) => {
-	let local = n;
-	return () => local; // this is a closure, because it references a value from local scope around it.
+// let wrapValue = (n) => {
+// 	let local = n;
+// 	return () => local; // this is a closure, because it references a value from local scope around it.
+// }
+
+// let x = wrapValue(10);
+// let y = wrapValue(999);
+
+// console.log(x());
+// console.log(y());
+
+
+
+// RECURSION PUZZLE
+// Consider this puzzle: 
+// by starting from the number 1 and 
+// repeatedly either adding 5 or multiplying by 3,
+// an infinite set of numbers can be produced. 
+// How would you write a function that, given a number,
+// tries to find a sequence of such additions and
+// multiplications that produces that number?
+
+function solvePuzzle(x, sequence = []) {
+	// Failed state
+	if (x < 6) {
+		throw "Number below 6";
+	}
+
+	// Termination
+	if (x === 6) {
+		sequence.unshift(1, 5);
+		return sequence;
+	}
+
+	// Recursion
+	else if (x % 3 === 0) {
+		{
+			x = x / 3;
+			sequence.unshift(3);
+			solvePuzzle(x, sequence);
+		}
+		{
+			x -= 15;
+			sequence.unshift(5, 5, 5);
+			solvePuzzle(x, sequence);
+		}
+	} else {
+		x -= 5;
+		sequence.unshift(5);
+		solvePuzzle(x, sequence);
+	}
 }
-
-let x = wrapValue(10);
-let y = wrapValue(999);
-
-console.log(x());
-console.log(y());
