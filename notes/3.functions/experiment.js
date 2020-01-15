@@ -89,33 +89,33 @@
 // tries to find a sequence of such additions and
 // multiplications that produces that number?
 
-function solvePuzzle(x, sequence = []) {
-	// Failed state
-	if (x < 6) {
-		throw "Number below 6";
-	}
+// function solvePuzzle(x, sequence = []) {
+// 	// Failed state
+// 	if (x < 6) {
+// 		throw "Number below 6";
+// 	}
 
-	// Termination
-	if (x === 6) {
-		sequence.unshift(1, 5);
-		return sequence;
-	}
+// 	// Termination
+// 	if (x === 6) {
+// 		sequence.unshift(1, 5);
+// 		return sequence;
+// 	}
 
-	// Recursion
-	else if (x % 3 === 0) {
-		{
-			x = x / 3;
-			sequence.unshift(3);
-			solvePuzzle(x, sequence);
-		}
-		{
-			x -= 15;
-			sequence.unshift(5, 5, 5);
-			solvePuzzle(x, sequence);
-		}
-	} else {
-		x -= 5;
-		sequence.unshift(5);
-		solvePuzzle(x, sequence);
-	}
-}
+// 	// Recursion
+// 	else if (x % 3 === 0) {
+// 		{
+// 			x = x / 3;
+// 			sequence.unshift(3);
+// 			solvePuzzle(x, sequence);
+// 		}
+// 		{
+// 			x -= 15;
+// 			sequence.unshift(5, 5, 5);
+// 			solvePuzzle(x, sequence);
+// 		}
+// 	} else {
+// 		x -= 5;
+// 		sequence.unshift(5);
+// 		solvePuzzle(x, sequence);
+// 	}
+// }
