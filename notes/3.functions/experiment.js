@@ -89,51 +89,38 @@
 // tries to find a sequence of such additions and
 // multiplications that produces that number?
 
-// function solvePuzzle(x, sequence = []) {
-// 	// Failed state
-// 	if (x < 6) {
-// 		throw "Number below 6";
-// 	}
-
-// 	// Termination
-// 	if (x === 6) {
-// 		sequence.unshift(1, 5);
-// 		return sequence;
-// 	}
-
-// 	// Recursion
-// 	else if (x % 3 === 0) {
-// 		{
-// 			x = x / 3;
-// 			sequence.unshift(3);
-// 			solvePuzzle(x, sequence);
-// 		}
-// 		{
-// 			x -= 15;
-// 			sequence.unshift(5, 5, 5);
-// 			solvePuzzle(x, sequence);
-// 		}
-// 	} else {
-// 		x -= 5;
-// 		sequence.unshift(5);
-// 		solvePuzzle(x, sequence);
-// 	}
-// }
-
-
-function findSolution(target) {
-	function find(current, history) {
-		if (current == target) {
-			return history;
-		} else if (current > target) {
+function solvePuzzle(target) {
+	// Recursion
+	function find(current = target, sequence = "") {
+		if (current == 1) {
+			return sequence;
+		} else if (current < 1) {
 			return null;
 		} else {
-			return find(current + 5, `(${history} + 5)`) ||
-				find(current * 3, `(${history} * 3)`);
+			// @ts-ignore
+			return find(current / 3, "3" + sequence) || find(current - 5, "5" + sequence);
 		}
 	}
-	return find(1, "1");
+	let sequence = find();
+	sequence = "1" + sequence;
+	console.log(sequence);
 }
 
-console.log(findSolution(24));
- // → (((1 * 3) + 5) * 3)
+solvePuzzle(12);
+
+// function findSolution(target) {
+// 	function find(current, history) {
+// 		if (current == target) {
+// 			return history;
+// 		} else if (current > target) {
+// 			return null;
+// 		} else {
+// 			return find(current + 5, `(${history} + 5)`) ||
+// 				find(current * 3, `(${history} * 3)`);
+// 		}
+// 	}
+// 	return find(1, "1");
+// }
+
+// console.log(findSolution(24));
+//  // → (((1 * 3) + 5) * 3)
