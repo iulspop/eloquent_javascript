@@ -125,12 +125,8 @@
 // console.log(findSolution(24));
 //  // → (((1 * 3) + 5) * 3)
 
-function pow(x, n, product = 1) {
-	if (n == 0) {
-		return product
-	}
-	product *= x;
-	return pow(x, n - 1, product);
+function pow(x, n) {
+	return (n == 1) ? x : x * pow(x, n - 1);
 }
 
-console.log(pow(5, 5));
+console.log(pow(5, 3));
