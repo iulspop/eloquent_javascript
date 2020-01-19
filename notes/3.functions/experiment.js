@@ -89,24 +89,24 @@
 // tries to find a sequence of such additions and
 // multiplications that produces that number?
 
-function solvePuzzle(target) {
-	// Recursion
-	function find(current = target, sequence = "") {
-		if (current == 1) {
-			return sequence;
-		} else if (current < 1) {
-			return null;
-		} else {
-			// @ts-ignore
-			return find(current / 3, "3" + sequence) || find(current - 5, "5" + sequence);
-		}
-	}
-	let sequence = find();
-	sequence = "1" + sequence;
-	console.log(sequence);
-}
+// function solvePuzzle(target) {
+// 	// Recursion
+// 	function find(current = target, sequence = "") {
+// 		if (current == 1) {
+// 			return sequence;
+// 		} else if (current < 1) {
+// 			return null;
+// 		} else {
+// 			// @ts-ignore
+// 			return find(current / 3, "3" + sequence) || find(current - 5, "5" + sequence);
+// 		}
+// 	}
+// 	let sequence = find();
+// 	sequence = "1" + sequence;
+// 	console.log(sequence);
+// }
 
-solvePuzzle(12);
+// solvePuzzle(12);
 
 // function findSolution(target) {
 // 	function find(current, history) {
@@ -124,3 +124,13 @@ solvePuzzle(12);
 
 // console.log(findSolution(24));
 //  // → (((1 * 3) + 5) * 3)
+
+function pow(x, n, product = 1) {
+	if (n == 0) {
+		return product
+	}
+	product *= x;
+	return pow(x, n - 1, product);
+}
+
+console.log(pow(5, 5));
