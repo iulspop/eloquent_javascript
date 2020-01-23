@@ -1,3 +1,4 @@
+"use strict";
 // @ts-check
 // let i = 0;
 
@@ -125,8 +126,19 @@
 // console.log(findSolution(24));
 //  // → (((1 * 3) + 5) * 3)
 
-function pow(x, n) {
-	return (n == 1) ? x : x * pow(x, n - 1);
-}
+// function pow(x, n) {
+// 	return (n == 1) ? x : x * pow(x, n - 1);
+// }
 
-console.log(pow(5, 3));
+// // console.log(pow(5, 3));
+// function purple() {
+// 	console.log("purple");
+// }
+
+// const x = purple
+
+// function purple() {
+// 	console.log("blue");
+// }
+
+// x();
