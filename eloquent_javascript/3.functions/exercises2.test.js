@@ -72,20 +72,39 @@
 //   return isEven((n -= 2));
 // }
 
-describe("Bean Counter", () => {
-  it("counts the letter 'B' in a string", () => {
-    expect(countBs("Burblebob")).toEqual(4);
-  });
+// describe("Bean Counter", () => {
+//   it("counts the letter 'B' in a string", () => {
+//     expect(countBs("Burblebob")).toEqual(4);
+//   });
 
-  it("counts the letter 'B' in a string", () => {
-    expect(countBs("Baddaaboom")).toEqual(2);
+//   it("counts the letter 'B' in a string", () => {
+//     expect(countBs("Baddaaboom")).toEqual(2);
+//   });
+// });
+
+// function countBs(string) {
+//   let count = 0;
+//   for (let i = 0; i < string.length; i++) {
+//     if (string[i] == "b" || string[i] == "B") {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+describe("Character Counter", () => {
+  it('should count five "e" in Boodeedodeede given "E" or "e"', () => {
+    expect(countChar("Boodeedodeede", "E")).toEqual(5);
   });
 });
 
-function countBs(string) {
+function countChar(string, letter) {
   let count = 0;
   for (let i = 0; i < string.length; i++) {
-    if (string[i] == "b" || string[i] == "B") {
+    if (
+      string[i] == letter.toLowerCase() ||
+      string[i] == letter.toUpperCase()
+    ) {
       count++;
     }
   }
