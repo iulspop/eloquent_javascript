@@ -37,37 +37,57 @@
 //   return b;
 // }
 
-test("0 is even", () => {
-  expect(isEven(0)).toEqual(true);
+// test("0 is even", () => {
+//   expect(isEven(0)).toEqual(true);
+// });
+
+// test("1 is not even", () => {
+//   expect(isEven(1)).toEqual(false);
+// });
+
+// test("4 is even", () => {
+//   expect(isEven(4)).toEqual(true);
+// });
+
+// test("50 is even", () => {
+//   expect(isEven(50)).toEqual(true);
+// });
+
+// test("49 is not even", () => {
+//   expect(isEven(49)).toEqual(false);
+// });
+
+// test("-3 is not even", () => {
+//   expect(isEven(-3)).toEqual(false);
+// });
+
+// test("-54 is even", () => {
+//   expect(isEven(-54)).toEqual(true);
+// });
+
+// function isEven(n) {
+//   if (n == 0) return true;
+//   if (n == 1) return false;
+//   if (n < 0) return isEven((n += 2));
+//   return isEven((n -= 2));
+// }
+
+describe("Bean Counter", () => {
+  it("counts the letter 'B' in a string", () => {
+    expect(countBs("Burblebob")).toEqual(4);
+  });
+
+  it("counts the letter 'B' in a string", () => {
+    expect(countBs("Baddaaboom")).toEqual(2);
+  });
 });
 
-test("1 is not even", () => {
-  expect(isEven(1)).toEqual(false);
-});
-
-test("4 is even", () => {
-  expect(isEven(4)).toEqual(true);
-});
-
-test("50 is even", () => {
-  expect(isEven(50)).toEqual(true);
-});
-
-test("49 is not even", () => {
-  expect(isEven(49)).toEqual(false);
-});
-
-test("-3 is not even", () => {
-  expect(isEven(-3)).toEqual(false);
-});
-
-test("-54 is even", () => {
-  expect(isEven(-54)).toEqual(true);
-});
-
-function isEven(n) {
-  if (n == 0) return true;
-  if (n == 1) return false;
-  if (n < 0) return isEven((n += 2));
-  return isEven((n -= 2));
+function countBs(string) {
+  let count = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == "b" || string[i] == "B") {
+      count++;
+    }
+  }
+  return count;
 }
