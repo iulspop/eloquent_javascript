@@ -116,3 +116,24 @@ let x = 20 - 18;
 
 let listOfNumbers = [9, 7, 5, 6, 0, 3];
 console.log(listOfNumbers[5 && 0]);
+
+let descriptions = {
+  pop: "sound",
+  purple: "color",
+  "red nose": "leaky"
+};
+
+delete descriptions["red nose"];
+console.log(descriptions["red nose"]);
+
+console.log("pop" in descriptions);
+
+console.log(Object.keys(descriptions));
+
+console.log(Object.assign(descriptions, { secret: "destruction" }));
+
+let apple = { reindeer: "red nose" };
+
+apple = { type: "fruit" };
+
+console.log(apple.type);
