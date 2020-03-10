@@ -43,3 +43,19 @@
   console.log(returnFirstInCue(array));
   console.log(returnFirstInCue(array));
 }
+
+{
+  let event1 = "hey";
+  let event2 = "no";
+  let event3 = "yes";
+
+  let objectLiteral = {
+    hey: "hey",
+    event2,
+    event3
+  };
+
+  for (let key in objectLiteral) {
+    console.log(objectLiteral[key]);
+  }
+}
