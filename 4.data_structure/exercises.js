@@ -78,13 +78,20 @@
 //   console.log(array.indexOf(7, 9));
 // }
 
+// {
+//   console.log("play with array.filter");
+//   const l = [0, 1, 2, 7, "4", 5, 6, 7, 8, 9, 10, "purple", "red", "green"];
+
+//   const newList = l.filter(v => typeof v == typeof 4 && v <= 4);
+//   const newList2 = l.filter((v, index, array) => array.length > 9);
+
+//   console.log(newList);
+//   console.log(newList2);
+// }
+
 {
-  console.log("play with array.filter");
-  const l = [0, 1, 2, 7, "4", 5, 6, 7, 8, 9, 10, "purple", "red", "green"];
+  console.log("play with array.slice()");
+  const l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  const newList = l.filter(v => typeof v == typeof 4 && v <= 4);
-  const newList2 = l.filter((v, index, array) => array.length > 9);
-
-  console.log(newList);
-  console.log(newList2);
+  console.log(l.slice(1, 5)); // [1, 5[
 }
