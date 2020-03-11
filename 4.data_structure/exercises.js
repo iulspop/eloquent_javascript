@@ -90,8 +90,18 @@
 // }
 
 {
-  console.log("play with array.slice()");
+  console.log("play with array.slice() and array.concat()");
   const l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   console.log(l.slice(1, 5)); // [1, 5[
+  console.log(
+    l
+      .slice(0, 7)
+      .concat({ hello: { hello: { hello: { hello: { hello: "purple" } } } } }, [
+        1,
+        2,
+        4,
+        5
+      ])
+  );
 }
