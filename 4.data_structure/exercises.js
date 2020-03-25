@@ -89,19 +89,32 @@
 //   console.log(newList2);
 // }
 
-{
-  console.log("play with array.slice() and array.concat()");
-  const l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// {
+//   console.log("play with array.slice() and array.concat()");
+//   const l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  console.log(l.slice(1, 5)); // [1, 5[
-  console.log(
-    l
-      .slice(0, 7)
-      .concat({ hello: { hello: { hello: { hello: { hello: "purple" } } } } }, [
-        1,
-        2,
-        4,
-        5
-      ])
-  );
+//   console.log(l.slice(1, 5)); // [1, 5[
+//   console.log(
+//     l
+//       .slice(0, 7)
+//       .concat({ hello: { hello: { hello: { hello: { hello: "purple" } } } } }, [
+//         1,
+//         2,
+//         4,
+//         5
+//       ])
+//   );
+// }
+
+{
+  console.log("play with string fundamental methods");
+
+  const hello =
+    "             \n \n \n    My1 name is tyranosoraus rex. I'm a bloodthirsty dinosaur from an ancient period in history. Pleased to meet you :)       ";
+  console.log(hello.indexOf("ancient"));
+  console.log(hello.slice(0));
+  console.log(hello.trim());
+
+  const hello2 = "^";
+  console.log(hello2.padEnd(101, "0"));
 }
