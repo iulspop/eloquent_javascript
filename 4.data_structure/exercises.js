@@ -128,6 +128,6 @@
   console.log(hello.split("blood").join("happy"));
   console.log(hello.repeat(2));
 
-  const hello2 = ["yellow", "purple", "red"];
+  const hello2 = ["yellow", "purple", "red", 5, 6, 8, true];
   console.log(hello2.join(" "));
 }
