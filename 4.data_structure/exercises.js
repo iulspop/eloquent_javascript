@@ -106,15 +106,28 @@
 //   );
 // }
 
+// {
+//   console.log("play with string methods");
+
+//   const hello =
+//     "             \n \n \n    My1 name is tyranosoraus rex. I'm a bloodthirsty dinosaur from an ancient period in history. Pleased to meet you :)       ";
+//   console.log(hello.indexOf("ancient"));
+//   console.log(hello.slice(0));
+//   console.log(hello.trim());
+
+//   const hello2 = "^";
+//   console.log(hello2.padEnd(11, "0"));
+// }
+
 {
-  console.log("play with string fundamental methods");
+  console.log("play with more string methods");
 
   const hello =
-    "             \n \n \n    My1 name is tyranosoraus rex. I'm a bloodthirsty dinosaur from an ancient period in history. Pleased to meet you :)       ";
-  console.log(hello.indexOf("ancient"));
-  console.log(hello.slice(0));
-  console.log(hello.trim());
+    "My name is tyranosoraus rex. I'm a bloodthirsty dinosaur from an ancient period in history. Pleased to meet you :)";
 
-  const hello2 = "^";
-  console.log(hello2.padEnd(101, "0"));
+  console.log(hello.split("blood").join("happy"));
+  console.log(hello.repeat(2));
+
+  const hello2 = ["yellow", "purple", "red"];
+  console.log(hello2.join(" "));
 }
