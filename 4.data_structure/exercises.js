@@ -119,15 +119,29 @@
 //   console.log(hello2.padEnd(11, "0"));
 // }
 
+// {
+//   console.log("play with more string methods");
+
+//   const hello =
+//     "My name is tyranosoraus rex. I'm a bloodthirsty dinosaur from an ancient period in history. Pleased to meet you :)";
+
+//   console.log(hello.split("blood").join("happy"));
+//   console.log(hello.repeat(2));
+
+//   const hello2 = ["yellow", "purple", "red", 5, 6, 8, true];
+//   console.log(hello2.join(" "));
+// }
+
 {
-  console.log("play with more string methods");
+  console.log("play with Math object");
 
-  const hello =
-    "My name is tyranosoraus rex. I'm a bloodthirsty dinosaur from an ancient period in history. Pleased to meet you :)";
+  console.log(Math.max("a", "gg", "cssd", "hellow"));
+  console.log(Math.max());
+  console.log(Math.max(-10, -2, true));
+  console.log(Math.max(...[-10, -2, false]));
+  console.log(Math.max(1, 2.4242));
 
-  console.log(hello.split("blood").join("happy"));
-  console.log(hello.repeat(2));
+  console.log(Math.min("-2323", "5", 10));
 
-  const hello2 = ["yellow", "purple", "red", 5, 6, 8, true];
-  console.log(hello2.join(" "));
+  console.log(Math.sqrt(100));
 }
