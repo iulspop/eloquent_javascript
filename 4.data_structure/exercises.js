@@ -160,6 +160,11 @@
   appleJuicer = 5;
   // appleJuicer();
 
+  const appleJuicerSupreme = () => {
+    console.log("super apple juice");
+  };
+  appleJuicerSupreme();
+
   var coconuts = 10;
   coconuts = "bananas";
   console.log(coconuts);
