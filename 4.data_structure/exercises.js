@@ -132,40 +132,43 @@
 //   console.log(hello2.join(" "));
 // }
 
-// {
-//   console.log("play with Math object");
-
-//   console.log(Math.max("a", "gg", "cssd", "hellow"));
-//   console.log(Math.max());
-//   console.log(Math.max(-10, -2, true));
-//   console.log(Math.max(...[-10, -2, false]));
-//   console.log(Math.max(1, 2.4242));
-
-//   console.log(Math.min("-2323", "5", 10));
-
-//   console.log(Math.sqrt(100));
-// }
-
 {
-  console.log(
-    "play with Javascript not warning you when rebinding var, standard bindings or functions"
-  );
+  console.log("play with Math object");
 
-  var Math = 5;
-  // console.log(Math.max(5, 7));
+  console.log(Math.max("a", "gg", "cssd", "hellow"));
+  console.log(Math.max());
+  console.log(Math.max(-10, -2, true));
+  console.log(Math.max(...[-10, -2, false]));
+  console.log(Math.max(1, 2.4242));
 
-  function appleJuicer() {
-    console.log("apple juice");
-  }
-  appleJuicer = 5;
-  // appleJuicer();
+  console.log(Math.min("-2323", "5", 10));
 
-  const appleJuicerSupreme = () => {
-    console.log("super apple juice");
-  };
-  appleJuicerSupreme();
+  console.log(Math.sqrt(100));
 
-  var coconuts = 10;
-  coconuts = "bananas";
-  console.log(coconuts);
+  console.log(Math.round(-5.4));
+  console.log(Math.round(5.4));
 }
+
+// {
+//   console.log(
+//     "play with Javascript not warning you when rebinding var, standard bindings or functions"
+//   );
+
+//   var Math = 5;
+//   // console.log(Math.max(5, 7));
+
+//   function appleJuicer() {
+//     console.log("apple juice");
+//   }
+//   appleJuicer = 5;
+//   // appleJuicer();
+
+//   const appleJuicerSupreme = () => {
+//     console.log("super apple juice");
+//   };
+//   appleJuicerSupreme();
+
+//   var coconuts = 10;
+//   coconuts = "bananas";
+//   console.log(coconuts);
+// }
