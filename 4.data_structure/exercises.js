@@ -132,22 +132,22 @@
 //   console.log(hello2.join(" "));
 // }
 
-{
-  console.log("play with Math object");
+// {
+//   console.log("play with Math object");
 
-  console.log(Math.max("a", "gg", "cssd", "hellow"));
-  console.log(Math.max());
-  console.log(Math.max(-10, -2, true));
-  console.log(Math.max(...[-10, -2, false]));
-  console.log(Math.max(1, 2.4242));
+//   console.log(Math.max("a", "gg", "cssd", "hellow"));
+//   console.log(Math.max());
+//   console.log(Math.max(-10, -2, true));
+//   console.log(Math.max(...[-10, -2, false]));
+//   console.log(Math.max(1, 2.4242));
 
-  console.log(Math.min("-2323", "5", 10));
+//   console.log(Math.min("-2323", "5", 10));
 
-  console.log(Math.sqrt(100));
+//   console.log(Math.sqrt(100));
 
-  console.log(Math.round(-5.4));
-  console.log(Math.round(5.4));
-}
+//   console.log(Math.round(-5.4));
+//   console.log(Math.round(5.4));
+// }
 
 // {
 //   console.log(
@@ -172,3 +172,29 @@
 //   coconuts = "bananas";
 //   console.log(coconuts);
 // }
+
+{
+  console.log("play with destructuring");
+
+  const array = [1, 2, 3, 4, 5];
+  const object = { a: 1, b: 2, c: 3, d: 4 };
+
+  function logDestructuredArray([
+    hello,
+    helloAgain,
+    finalHello,
+    neverAgain,
+    oneMore,
+    andAgain
+  ]) {
+    console.log(hello, helloAgain, finalHello, andAgain);
+  }
+
+  logDestructuredArray(array);
+
+  function logDestrucuredObject({ turtle, d, a }) {
+    console.log(a, turtle, d);
+  }
+
+  logDestrucuredObject(object);
+}
