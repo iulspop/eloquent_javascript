@@ -1,0 +1,13 @@
+{
+  "hello": 5,
+  "myNameIs": "Iuliu",
+  "no": false,
+  "yes": {
+    "ok": "ok",
+    "silent approval": [
+      "gesture of the hand",
+      { "a": "a", "b": "b", "c": "c" },
+      "nod of the head"
+    ]
+  }
+}

@@ -173,28 +173,53 @@
 //   console.log(coconuts);
 // }
 
+// {
+//   console.log("play with destructuring");
+
+//   const array = [1, 2, 3, 4, 5];
+//   const object = { a: 1, b: 2, c: 3, d: 4 };
+
+//   function logDestructuredArray([
+//     hello,
+//     helloAgain,
+//     finalHello,
+//     neverAgain,
+//     oneMore,
+//     andAgain
+//   ]) {
+//     console.log(hello, helloAgain, finalHello, andAgain);
+//   }
+
+//   logDestructuredArray(array);
+
+//   function logDestrucuredObject({ turtle, d, a }) {
+//     console.log(a, turtle, d);
+//   }
+
+//   logDestrucuredObject(object);
+// }
+
 {
-  console.log("play with destructuring");
+  console.log("play with JSON");
 
-  const array = [1, 2, 3, 4, 5];
-  const object = { a: 1, b: 2, c: 3, d: 4 };
+  let jsonString = `{
+    "hello": 5,
+    "myNameIs": "Iuliu",
+    "no": false,
+    "yes": {
+      "ok": "ok",
+      "silent approval": [
+        "gesture of the hand",
+        { "a": "a", "b": "b", "c": "c" },
+        "nod of the head"
+      ]
+    }
+  }`;
 
-  function logDestructuredArray([
-    hello,
-    helloAgain,
-    finalHello,
-    neverAgain,
-    oneMore,
-    andAgain
-  ]) {
-    console.log(hello, helloAgain, finalHello, andAgain);
-  }
+  console.log(JSON.parse(jsonString));
 
-  logDestructuredArray(array);
-
-  function logDestrucuredObject({ turtle, d, a }) {
-    console.log(a, turtle, d);
-  }
-
-  logDestrucuredObject(object);
+  console.log(
+    JSON.stringify({ number1: 1, number2: 2, helloNumbers: [0, 1, 2, 3] })
+  );
+  console.log(JSON.stringify(5));
 }
