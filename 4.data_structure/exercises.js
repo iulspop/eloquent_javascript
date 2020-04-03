@@ -8,3 +8,13 @@ const range = (start, end) => {
 };
 
 console.log(range(1, 10));
+
+const sum = numbers => {
+  let sum = 0;
+  for (let number of numbers) {
+    sum += number;
+  }
+  return sum;
+};
+
+console.log(sum(range(1, 10)));
