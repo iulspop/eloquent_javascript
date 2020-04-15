@@ -1,7 +1,7 @@
 // {
 //   let AnObject = {
 //     prop1: "2",
-//     prop2: "3"
+//     prop2: "3",
 //   };
 
 //   delete AnObject["prop2"];
@@ -55,24 +55,29 @@
 //   console.log(array.unshift("z"));
 // }
 
+{
+  let event1 = "hey";
+  let event2 = "no";
+  let event3 = "yes";
+
+  let objectLiteral = {
+    hey: "hey",
+    event2,
+    event3,
+  };
+
+  let arrayLiteral = ["play", "apples", "ball"];
+
+  for (let key in objectLiteral) {
+    console.log(objectLiteral[key]);
+  }
+  for (let element in arrayLiteral) {
+    console.log(element);
+  }
+}
+
 // {
-//   let event1 = "hey";
-//   let event2 = "no";
-//   let event3 = "yes";
-
-//   let objectLiteral = {
-//     hey: "hey",
-//     event2,
-//     event3
-//   };
-
-//   for (let key in objectLiteral) {
-//     console.log(objectLiteral[key]);
-//   }
-// }
-
-// {
-//   console.log("play with array.indexOf")
+//   console.log("play with array.indexOf");
 //   const array = [0, 1, 2, 7, 4, 5, 6, 7, 8, 9, 10];
 
 //   console.log(array.indexOf(7, 9));
@@ -82,7 +87,7 @@
 //   console.log("play with array.filter");
 //   const l = [0, 1, 2, 7, "4", 5, 6, 7, 8, 9, 10, "purple", "red", "green"];
 
-//   const newList = l.filter(v => typeof v == typeof 4 && v <= 4);
+//   const newList = l.filter((v) => typeof v == typeof 4 && v <= 4);
 //   const newList2 = l.filter((v, index, array) => array.length > 9);
 
 //   console.log(newList);
@@ -101,7 +106,7 @@
 //         1,
 //         2,
 //         4,
-//         5
+//         5,
 //       ])
 //   );
 // }
@@ -185,7 +190,7 @@
 //     finalHello,
 //     neverAgain,
 //     oneMore,
-//     andAgain
+//     andAgain,
 //   ]) {
 //     console.log(hello, helloAgain, finalHello, andAgain);
 //   }
