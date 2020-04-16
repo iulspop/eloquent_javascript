@@ -6,7 +6,7 @@
   "author": "Iuliu Pop <iuliu.laurentiu.pop@protonmail.com>",
   "license": "MIT",
   "scripts": {
-	"test": "jest"
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^24.9.0"
