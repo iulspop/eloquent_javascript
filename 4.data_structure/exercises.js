@@ -1,4 +1,4 @@
-export const range = (start, end) => {
+const range = (start, end) => {
   let range = [];
   while (end >= start) {
     range.unshift(end);
@@ -9,7 +9,7 @@ export const range = (start, end) => {
 
 console.log(range(1, 10));
 
-export const sum = (numbers) => {
+const sum = (numbers) => {
   let sum = 0;
   for (let number of numbers) {
     sum += number;
@@ -19,7 +19,7 @@ export const sum = (numbers) => {
 
 console.log(sum(range(1, 10)));
 
-export const rangeWithStep = (start, end, step = 1) => {
+const rangeWithStep = (start, end, step = 1) => {
   let range = [];
   while (start >= end) {
     range.unshift(start);
