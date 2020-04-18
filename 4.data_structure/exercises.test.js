@@ -42,7 +42,13 @@ describe("range function with step param", () => {
     expect(range(5, 2, -1)).toEqual([5, 4, 3, 2]);
   });
   test("edge case: step 0 should return empty array", () => {
-    expect(range(0, 100, 0)).toEqual([]);
+    expect(range(5, 100, 0)).toEqual([]);
+  });
+  test("edge case: step 0 should return empty array", () => {
+    expect(range(100, 5, 0)).toEqual([]);
+  });
+  test("edge case: step negative step end is greater than start", () => {
+    expect(range(20, 25, -5)).toEqual([]);
   });
 });
 
