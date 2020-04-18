@@ -1,8 +1,8 @@
-const range = (start, end) => {
+const range = (start, end, step = 1) => {
   let range = [];
-  while (end >= start) {
-    range.unshift(end);
-    end--;
+  while (start <= end) {
+    range.push(start);
+    start += step;
   }
   return range;
 };
