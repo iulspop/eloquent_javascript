@@ -1,4 +1,5 @@
 const range = require("./range");
+const sum = require("./sum");
 
 describe("range function", () => {
   test("returns array of whole numbers from start to end inclusively", () => {
@@ -30,5 +31,23 @@ describe("range function with step param", () => {
   });
   test("edge case: negative step", () => {
     expect(range(-20, 5, -5)).toEqual([]);
+  });
+  test("edge case: negative step", () => {
+    expect(range(20, 5, -5)).toEqual([20, 15, 10, 5]);
+  });
+  test("edge case: negative step", () => {
+    expect(range(-20, -40, -5)).toEqual([-20, -25, -30, -35, -40]);
+  });
+  test("edge case: negative step", () => {
+    expect(range(5, 2, -1)).toEqual([5, 4, 3, 2]);
+  });
+  test("edge case: step 0 should return empty array", () => {
+    expect(range(0, 100, 0)).toEqual([]);
+  });
+});
+
+describe("range and sum function working together", () => {
+  test("", () => {
+    expect(sum(range(1, 10))).toEqual(55);
   });
 });
