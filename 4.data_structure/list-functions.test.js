@@ -1,4 +1,4 @@
-const { arrayToList, listToArray, prepend } = require("./list-functions");
+const { arrayToList, listToArray, prepend, nth } = require("./list-functions");
 
 describe("arrayToList", () => {
   it("returns list (nested set of objects) from array", () => {
@@ -41,5 +41,17 @@ describe("prepend function", () => {
       value: "purples",
       rest: { value: 10, rest: { value: 20, rest: null } },
     });
+  });
+});
+
+describe("nth function", () => {
+  it("returns element value from position number and list", () => {
+    expect(nth(arrayToList([10, 30]), 1)).toEqual(30);
+  });
+  it("returns element value from position number and list", () => {
+    expect(nth(arrayToList([10, 30, 60]), 2)).toEqual(60);
+  });
+  it("returns undefined if element doesn't exist", () => {
+    expect(nth(arrayToList([10, 30, 60]), 5)).toEqual(undefined);
   });
 });

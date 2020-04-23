@@ -34,4 +34,9 @@ const prepend = (element, list) => {
   return newList;
 };
 
-module.exports = { arrayToList, listToArray, prepend };
+const nth = (list, position) => {
+  let array = listToArray(list);
+  return array[position];
+};
+
+module.exports = { arrayToList, listToArray, prepend, nth };
