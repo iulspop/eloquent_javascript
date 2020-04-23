@@ -1,4 +1,4 @@
-const { arrayToList, listToArray } = require("./list-functions");
+const { arrayToList, listToArray, prepend } = require("./list-functions");
 
 describe("arrayToList", () => {
   it("returns list (nested set of objects) from array", () => {
@@ -26,5 +26,20 @@ describe("listToArray", () => {
         rest: { value: 55, rest: { value: 30, rest: { value: 40, rest: { value: 50, rest: null } } } },
       })
     ).toEqual([10, 55, 30, 40, 50]);
+  });
+});
+
+describe("prepend function", () => {
+  it("adds element to front of list and returns new list", () => {
+    expect(prepend("bananas", { value: 10, rest: { value: 20, rest: null } })).toEqual({
+      value: "bananas",
+      rest: { value: 10, rest: { value: 20, rest: null } },
+    });
+  });
+  it("adds element to front of list and returns new list", () => {
+    expect(prepend("purples", { value: 10, rest: { value: 20, rest: null } })).toEqual({
+      value: "purples",
+      rest: { value: 10, rest: { value: 20, rest: null } },
+    });
   });
 });

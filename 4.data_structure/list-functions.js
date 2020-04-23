@@ -27,4 +27,11 @@ const listToArray = (list) => {
   return array;
 };
 
-module.exports = { arrayToList, listToArray };
+const prepend = (element, list) => {
+  const newList = {};
+  newList.value = element;
+  newList.rest = list;
+  return newList;
+};
+
+module.exports = { arrayToList, listToArray, prepend };
