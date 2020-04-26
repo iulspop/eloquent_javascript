@@ -13,14 +13,8 @@ const listToArray = (list) => {
   let array = [];
 
   if (list.value) {
-    array.push(list.value);
-    checkRest(list.rest);
-  }
-
-  function checkRest(rest) {
-    if (rest) {
-      array.push(rest.value);
-      checkRest(rest.rest);
+    for (let node = list; node; node = node.rest) {
+      array.push(node.value);
     }
   }
 
@@ -34,9 +28,10 @@ const prepend = (element, list) => {
   return newList;
 };
 
-const nth = (list, position) => {
-  let array = listToArray(list);
-  return array[position];
+const nth = (list, n) => {
+  if (!list) return undefined;
+  else if (n == 0) return list.value;
+  else return nth(list.rest, n - 1);
 };
 
 module.exports = { arrayToList, listToArray, prepend, nth };
