@@ -1,29 +1,18 @@
-const deepEqual = (x, y) => {
-  if (deepEqualObject(x, y)) {
-    return true;
-  } else {
-    return x === y;
+const deepEqual = (a, b) => {
+  if (a === b) return true;
+
+  if (a == null || typeof a != "object" || 
+      b == null || typeof b != "object") return false;
+
+  let keysA = Object.keys(a), keysB = Object.keys(b);
+
+  if (keysA.length != keysB.length) return false;
+
+  for (let key of keysA) {
+    if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
   }
 
-  function deepEqualObject(x, y) {
-    if (x === null || y === null) {
-      if (x !== y) {
-        return false;
-      }
-    } else if (typeof x == "object" && typeof y == "object") {
-      if (Object.keys(x).length == 0) {
-        return x == y;
-      }
-      for (let index in Object.keys(x)) {
-        return deepEqualObject(x[Object.keys(x)[index]], y[Object.keys(y)[index]]);
-      }
-      return true;
-    } else if (x !== y) {
-      return false;
-    }
-  }
+  return true;
 };
-
-deepEqual({ purple: "red" }, { purple: "purple" });
 
 module.exports = deepEqual;
