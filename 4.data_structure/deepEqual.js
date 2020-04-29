@@ -9,10 +9,10 @@ const deepEqual = (a, b) => {
   if (keysA.length != keysB.length) return false;
 
   for (let key of keysA) {
-    if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+    if(!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
   }
 
-  return true;
-};
+  return true
+}
 
-module.exports = deepEqual;
+module.exports = deepEqual
