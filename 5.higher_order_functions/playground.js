@@ -39,3 +39,11 @@
   
   console.log(array.some(el => el >= 5))
 }
+
+{
+  console.log("play with array.findIndex(callback)")
+
+  let array = [0, 1, 2, 3, 4, 5]
+
+  console.log(array.findIndex(el => el > 3))
+}
