@@ -1,10 +1,12 @@
 const every = (array, predicate) => {
-  for (let el of array) {
-    if (predicate(el) == false) {
-      return false;
-    }
+  for (let element of array) {
+    if (!predicate(element)) return false;
   }
   return true;
 };
 
-module.exports = every;
+const every2 = (array, predicate) => {
+  return !array.some((element) => !predicate(element));
+};
+
+module.exports = every2;
