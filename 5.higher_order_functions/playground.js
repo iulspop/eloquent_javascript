@@ -31,3 +31,11 @@
   console.log(fold(array, (a, b) => a + b))
   console.log(array.reduce((a, b) => a === 0 ? a + b : a * b))
 }
+
+{
+  console.log("play with array.some")
+  
+  let array = [0, 1, 2, 3, 4, 5]
+  
+  console.log(array.some(el => el >= 5))
+}
