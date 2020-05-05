@@ -46,3 +46,23 @@ function apples() {
   console.log(apple.eat());
   console.log(apple.toString());
 }
+
+{
+  console.log("play with makeshift constructor");
+
+  let protoBunny = {
+    speak() {
+      console.log(`${this.type} bunny wants grass.`);
+    },
+  };
+
+  function bunnyConstructor(type) {
+    let bunny = Object.create(protoBunny);
+    bunny.type = type;
+    return bunny;
+  }
+
+  let evilBunny = bunnyConstructor("evil");
+
+  evilBunny.speak();
+}
