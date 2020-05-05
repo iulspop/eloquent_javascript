@@ -28,6 +28,21 @@ function apples() {
   return this;
 }
 
-console.log(apples());
+{
+  console.log("play with prototype");
+  console.log(Object.getPrototypeOf({ purple: 5 }));
 
-console.log(this);
+  let protoFruit = {
+    eat() {
+      return `what a yummy ${this.color} ${this.name}`;
+    },
+    red: "red",
+  };
+
+  let apple = Object.create(protoFruit);
+  apple.color = "red";
+  apple.name = "annoying apple";
+
+  console.log(apple.eat());
+  console.log(apple.toString());
+}
