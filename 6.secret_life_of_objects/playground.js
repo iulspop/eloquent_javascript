@@ -66,3 +66,18 @@ function apples() {
 
   evilBunny.speak();
 }
+
+{
+  console.log("play with constructor");
+
+  function bunnyConstructor(type) {
+    this.type = type;
+  }
+
+  bunnyConstructor.prototype.speak = function () {
+    console.log(`${this.type} bunny wants grass.`);
+  };
+
+  let evilBunny = new bunnyConstructor("evil");
+  evilBunny.speak();
+}
