@@ -81,3 +81,20 @@ function apples() {
   let evilBunny = new bunnyConstructor("evil");
   evilBunny.speak();
 }
+
+{
+  console.log("play with class notation");
+
+  class Bunny {
+    constructor(type) {
+      this.type = type;
+    }
+    speak() {
+      console.log(`I am a ${this.type} bunny.`);
+    }
+  }
+
+  const purpleBunny = new Bunny("purple");
+
+  purpleBunny.speak();
+}
