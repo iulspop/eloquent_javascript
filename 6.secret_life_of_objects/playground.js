@@ -98,3 +98,16 @@ function apples() {
 
   purpleBunny.speak();
 }
+
+{
+  console.log("play with Map class");
+
+  let myMap = new Map();
+
+  let purple = { funkyObject: "funky" };
+
+  myMap.set(purple, "funky");
+
+  console.log(myMap.get(purple));
+  console.log(myMap.has(purple));
+}
