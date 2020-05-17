@@ -111,3 +111,25 @@ function apples() {
   console.log(myMap.get(purple));
   console.log(myMap.has(purple));
 }
+
+{
+  console.log("play with polymorphism");
+
+  function IAcceptObjectsOfManyShapes(object) {
+    return object.x + object.y;
+  }
+
+  let myObject = {
+    x: 5,
+    y: 10,
+  };
+
+  let objectWithAnotherShape = {
+    purple: "red",
+    x: 10,
+    y: 100,
+  };
+
+  console.log(IAcceptObjectsOfManyShapes(myObject));
+  console.log(IAcceptObjectsOfManyShapes(objectWithAnotherShape));
+}
