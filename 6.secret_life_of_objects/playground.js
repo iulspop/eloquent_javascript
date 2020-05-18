@@ -133,3 +133,31 @@ function apples() {
   console.log(IAcceptObjectsOfManyShapes(myObject));
   console.log(IAcceptObjectsOfManyShapes(objectWithAnotherShape));
 }
+
+{
+  ("play with Symbol function");
+
+  let sym = Symbol("banana");
+  let sym2 = Symbol("toString");
+  let sym3 = () => {};
+  let sym4 = () => {};
+
+  console.log(sym);
+  console.log(sym2);
+  console.log(sym == sym2);
+  console.log(sym == "banana");
+
+  let obj = {
+    banana: "hello",
+    [sym2]: "purple",
+    [sym]: "gray",
+    [sym4]: "",
+    [sym3]() {
+      return "red";
+    },
+  };
+
+  console.log(obj[sym]);
+  console.log(obj.toString());
+  console.log(obj[sym3]());
+}
