@@ -160,4 +160,8 @@ function apples() {
   console.log(obj[sym]);
   console.log(obj.toString());
   console.log(obj[sym3]());
+  console.log(Object.keys(obj));
+  console.log(Object.getOwnPropertyNames(obj));
+  console.log(Object.getOwnPropertyDescriptor(obj));
+  console.log(Object.getOwnPropertySymbols(obj));
 }
