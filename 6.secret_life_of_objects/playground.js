@@ -181,3 +181,47 @@ function apples() {
   console.log(arrayIterator.next());
   console.log(arrayIterator.next());
 }
+
+{
+  console.log("classical inheritence vs object composition");
+
+  // Classical inheritence (is-a relationship)
+  class Animal {
+    constructor() {
+      this.isAForceOfNature = true;
+    }
+    walks() {
+      return "it walks";
+    }
+  }
+
+  let animal = new Animal();
+  console.log(animal.isAForceOfNature);
+  console.log(animal.walks());
+
+  class Dog extends Animal {
+    constructor() {
+      super();
+      this.isDoggy = true;
+    }
+    playsCatch() {
+      return "woof!";
+    }
+  }
+
+  let dog = new Dog();
+  console.log(dog.isAForceOfNature);
+  console.log(dog.isDoggy);
+  console.log(dog.playsCatch());
+
+  // Object composition (has a relationship)
+  const lifeForce = { value: true };
+  const walks = { value: () => "it walks" };
+  const swims = { value: () => "it swims" };
+
+  let penguin = Object.create({}, { lifeForce, walks, swims });
+
+  console.log(penguin.lifeForce);
+  console.log(penguin.walks());
+  console.log(penguin.swims());
+}
