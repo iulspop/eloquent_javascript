@@ -165,3 +165,19 @@ function apples() {
   console.log(Object.getOwnPropertyDescriptor(obj));
   console.log(Object.getOwnPropertySymbols(obj));
 }
+
+{
+  console.log("Play with iterator");
+
+  let array = [1, 2];
+
+  console.log(Object.getOwnPropertySymbols(array));
+  console.log(array[Symbol.iterator]());
+
+  let arrayIterator = array[Symbol.iterator]();
+
+  console.log(arrayIterator.next());
+  console.log(arrayIterator.next());
+  console.log(arrayIterator.next());
+  console.log(arrayIterator.next());
+}
