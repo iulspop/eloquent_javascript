@@ -225,3 +225,21 @@ function apples() {
   console.log(penguin.walks());
   console.log(penguin.swims());
 }
+
+{
+  console.log("what does new keyword do?");
+
+  function Constructor(prop) {
+    this.prop = prop;
+  }
+  Constructor.prototype.foo = () => "bar";
+
+  let instance = new Constructor("prop");
+  console.log(instance.foo());
+  console.log(instance.prop);
+
+  let instance2 = Object.create(Constructor.prototype);
+  Constructor.call(instance2, "prop");
+  console.log(instance.foo());
+  console.log(instance.prop);
+}
