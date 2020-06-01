@@ -171,7 +171,7 @@ function apples() {
 
   let array = [1, 2];
 
-  console.log(Object.getOwnPropertySymbols(array));
+  console.log(Object.getOwnPropertySymbols(array.__proto__));
   console.log(array[Symbol.iterator]());
 
   let arrayIterator = array[Symbol.iterator]();
