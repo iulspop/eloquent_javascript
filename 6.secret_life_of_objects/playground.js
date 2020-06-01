@@ -183,6 +183,20 @@ function apples() {
 }
 
 {
+  console.log("Play with __proto__ vs prototype");
+
+  function Constructor(prop) {
+    this.prop = prop;
+  }
+
+  Constructor.prototype.method = () => 2;
+
+  let instance = new Constructor("prop");
+
+  console.log(instance.__proto__ === Constructor.prototype);
+}
+
+{
   console.log("classical inheritence vs object composition");
 
   // Classical inheritence (is-a relationship)
