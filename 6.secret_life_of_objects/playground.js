@@ -257,3 +257,18 @@ function apples() {
   console.log(instance.foo());
   console.log(instance.prop);
 }
+
+{
+  console.log("play with iterator again");
+
+  let array = [0, 1, 2, 3, 4];
+  let iterator = array[Symbol.iterator]();
+  console.log(Object.getPrototypeOf(iterator.next()));
+  console.log(iterator.next());
+  console.log(iterator.next());
+  console.log(iterator.next());
+  console.log(iterator.next());
+  console.log(iterator.next());
+  console.log(iterator.next());
+  console.log(iterator.next());
+}
