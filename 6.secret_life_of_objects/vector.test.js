@@ -11,4 +11,7 @@ describe("vector type: repesents vector in two-dimensional space", () => {
     vector.minus(new Vec(2, 3));
     expect(vector).toEqual({ x: -1, y: -1 });
   });
+  it("gets length", () => {
+    expect(new Vec(3, 4).length).toEqual(5);
+  });
 });

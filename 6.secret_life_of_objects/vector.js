@@ -11,6 +11,9 @@ class Vec {
     this.x = this.x - vec.x;
     this.y = this.y - vec.y;
   }
+  get length() {
+    return Math.sqrt(this.x ** 2 + this.y ** 2);
+  }
 }
 
 module.exports = Vec;
