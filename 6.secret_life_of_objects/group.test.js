@@ -28,4 +28,13 @@ describe("group type: holds values like Set data structure", () => {
     let group = Group.from([1, 2, 3]);
     expect(group.members).toEqual([1, 2, 3]);
   });
+
+  it("is iterable (provides Symbol.iterator interface)", () => {
+    let group = Group.from([1, 2, 3, 4]);
+    let members = [];
+    for (let member of group) {
+      members.push(member);
+    }
+    expect(members).toEqual([1, 2, 3, 4]);
+  });
 });

@@ -19,6 +19,20 @@ class Group {
     return this.members.includes(value);
   }
 
+  [Symbol.iterator]() {
+    return {
+      arr: this.members,
+      i: -1,
+      next() {
+        this.i++;
+        return {
+          value: this.arr[this.i],
+          done: this.i >= this.arr.length,
+        };
+      },
+    };
+  }
+
   static from(collection) {
     let group = new Group();
     for (let value of collection) {
