@@ -4,14 +4,12 @@ class Vec {
     this.y = y;
   }
 
-  plus(vec) {
-    this.x = this.x + vec.x;
-    this.y = this.y + vec.y;
+  plus(other) {
+    return new Vec(this.x + other.x, this.y + other.y);
   }
 
-  minus(vec) {
-    this.x = this.x - vec.x;
-    this.y = this.y - vec.y;
+  minus(other) {
+    return new Vec(this.x - other.x, this.y - other.y);
   }
 
   get length() {
