@@ -15,6 +15,13 @@ class Group {
       return true;
     } else return false;
   }
+  static from(iterable) {
+    let group = new Group();
+    for (let val of iterable) {
+      group[val] = val;
+    }
+    return group;
+  }
 }
 
 module.exports = Group;

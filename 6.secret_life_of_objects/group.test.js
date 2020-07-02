@@ -21,4 +21,8 @@ describe("group type: holds values like Set data structure", () => {
     expect(group.has(15)).toEqual(false);
     expect(group.has(10)).toEqual(true);
   });
+  it("creates group from iterator values", () => {
+    let group = Group.from([10, 20]);
+    expect(group).toEqual({ 10: 10, 20: 20 });
+  });
 });
