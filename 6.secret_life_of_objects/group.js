@@ -10,6 +10,11 @@ class Group {
       delete this[val];
     }
   }
+  has(val) {
+    if (this[val] === val) {
+      return true;
+    } else return false;
+  }
 }
 
 module.exports = Group;

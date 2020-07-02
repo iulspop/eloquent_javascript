@@ -14,4 +14,11 @@ describe("group type: holds values like Set data structure", () => {
     group.delete(10);
     expect(group).toEqual({ string: "string" });
   });
+  it("checks if it has values", () => {
+    let group = new Group();
+    group.add(10);
+    group.add("string");
+    expect(group.has(15)).toEqual(false);
+    expect(group.has(10)).toEqual(true);
+  });
 });
