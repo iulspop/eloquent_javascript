@@ -1,28 +1,28 @@
 class Group {
-  constructor() {}
+  constructor() {
+    this.members = [];
+  }
 
-  add(val) {
-    if (this[val] === undefined) {
-      this[val] = val;
+  add(value) {
+    if (!this.has(value)) {
+      this.members.push(value);
     }
   }
 
-  delete(val) {
-    if (this[val] === val) {
-      delete this[val];
+  delete(value) {
+    if (this.has(value)) {
+      this.members = this.members.filter((v) => v !== value);
     }
   }
 
-  has(val) {
-    if (this[val] === val) {
-      return true;
-    } else return false;
+  has(value) {
+    return this.members.includes(value);
   }
 
-  static from(iterable) {
+  static from(collection) {
     let group = new Group();
-    for (let val of iterable) {
-      group[val] = val;
+    for (let value of collection) {
+      group.add(value);
     }
     return group;
   }

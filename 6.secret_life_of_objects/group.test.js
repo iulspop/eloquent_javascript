@@ -5,7 +5,7 @@ describe("group type: holds values like Set data structure", () => {
     let group = new Group();
     group.add(10);
     group.add("string");
-    expect(group).toEqual({ 10: 10, string: "string" });
+    expect(group.members).toEqual([10, "string"]);
   });
 
   it("deletes values", () => {
@@ -13,10 +13,10 @@ describe("group type: holds values like Set data structure", () => {
     group.add(10);
     group.add("string");
     group.delete(10);
-    expect(group).toEqual({ string: "string" });
+    expect(group.members).toEqual(["string"]);
   });
 
-  it("checks if it has values", () => {
+  it("has checks", () => {
     let group = new Group();
     group.add(10);
     group.add("string");
@@ -24,8 +24,8 @@ describe("group type: holds values like Set data structure", () => {
     expect(group.has(10)).toEqual(true);
   });
 
-  it("creates group from iterator values", () => {
-    let group = Group.from([10, 20]);
-    expect(group).toEqual({ 10: 10, 20: 20 });
+  it("creates group from iterable collection", () => {
+    let group = Group.from([1, 2, 3]);
+    expect(group.members).toEqual([1, 2, 3]);
   });
 });
