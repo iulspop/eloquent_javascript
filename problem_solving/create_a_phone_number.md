@@ -22,3 +22,27 @@ phone number format:
 
 model 1 (what the problem requires):
     take array, divide into three groups, format each as a string of numbers, add each group together in number format.
+
+# Examples / Test Cases (validate understanding the problem)
+
+Example 1
+Input:
+    Integers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Output:
+    "(012) 345-6789"
+
+Example 2
+Input:
+    Integers: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Output:
+    "(000) 000-0000"
+    
+Example 3
+Input:
+    Integers: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+
+Output:
+    "(999) 999-9999"
+
