@@ -49,3 +49,7 @@ Input:
 Output:
     "(999) 999-9999"
 
+# Data Structure
+integers array
+slices of integers array
+phone number string
