@@ -53,3 +53,7 @@ Output:
 integers array
 slices of integers array
 phone number string
+
+# Algorithm
+(based on model 2)
+add and return "(" + integers 1 to 3 (accessed directly from integers array) + ")" + " " + integers 4 to 6 + "-" + integers 7 to 10
