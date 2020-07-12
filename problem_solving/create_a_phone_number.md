@@ -23,6 +23,9 @@ phone number format:
 model 1 (what the problem requires):
     take array, divide into three groups, format each as a string of numbers, add each group together in number format.
 
+model 2:
+    add into number format string different parts of integers array
+
 # Examples / Test Cases (validate understanding the problem)
 
 Example 1
